@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:15.14.0-stretch'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       agent any
