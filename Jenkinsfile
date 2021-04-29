@@ -7,10 +7,10 @@ pipeline {
 
   }
   stages {
-    stage('Build') {
+    stage('Test') {
       agent any
       steps {
-        sh 'npm start build'
+        sh 'npm test'
       }
     }
 
