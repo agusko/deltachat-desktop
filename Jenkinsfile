@@ -1,13 +1,13 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node:15.14.0-stretch'
+    }
+
+  }
   stages {
     stage('Build') {
-      agent {
-        node {
-          label '15.14.0-stretch'
-        }
-
-      }
+      agent any
       steps {
         sh 'RUN apt-get update'
         sh '''
