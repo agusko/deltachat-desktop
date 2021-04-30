@@ -10,7 +10,7 @@ pipeline {
     stage('Test') {
       agent any
       steps {
-        sh 'npm test'
+        sh 'npm test -Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true'
       }
     }
 
